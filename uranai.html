@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>京都大学 &lt;br /&gt; 同好会 &lt;br /&gt; 占い</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <link rel="icon" href="./favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="./index.css" />
+</head>
+
+<body>
+  <h1>
+    京都大学
+    <pre>&lt;br /&gt;</pre> 同好会
+    <pre>&lt;br /&gt;</pre> 占い
+  </h1>
+
+  <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <br />
+
+  <form id="form">
+    今日の br は？
+    <fieldset>
+      <div>
+        <input type="radio" id="br-close" name="br" checked>
+        <label for="br-close">&lt;br /&gt;</label>
+      </div>
+
+      <div>
+        <input type="radio" id="br-close-nospace" name="br">
+        <label for="br-close-nospace">&lt;br/&gt;</label>
+      </div>
+
+      <div>
+        <input type="radio" id="br-open-close" name="br">
+        <label for="br-open-close">&lt;br&gt;&lt;/br&gt;</label>
+      </div>
+
+      <div>
+        <input type="radio" id="br-noclose" name="br">
+        <label for="br-no-close">&lt;br&gt;</label>
+      </div>
+    </fieldset>
+    <div>
+      <button type="submit">送信</button>
+    </div>
+  </form>
+  <br /> Result:
+  <span id="result"></span>
+  <br />
+  <br />
+  <br />
+</body>
+
+<script type="text/javascript" src="./uranai.js"></script>
+
+</html>
