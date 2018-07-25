@@ -1,5 +1,5 @@
-pre {
-  display: inline;
+.pre {
+  white-space: pre;
 }
 
 img {
