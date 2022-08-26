@@ -15,11 +15,13 @@ function validate(text) {
   const BR_WITH_CLOSE = /<br(|  +)\/>/g
   const BR_OPEN = /<br *>/g
   const BR_CLOSE = /<\/br *>/g
+  const BR_CAPITALIZED = /<BR *\/?>/g
 
   br_goods = text.match(BR_GOOD)
   br_with_closes = text.match(BR_WITH_CLOSE)
   br_opens = text.match(BR_OPEN)
   br_closes = text.match(BR_CLOSE)
+  br_capitalized = text.match(BR_CAPITALIZED)
 
   if (br_opens) {
     return Promise.reject('閉じない br タグが含まれています。<br /> を使いましょう。')
@@ -29,6 +31,9 @@ function validate(text) {
   }
   if (br_with_closes) {
     return Promise.reject('br の後のスペースは一つにしましょう。')
+  }
+  if (br_capitalized) {
+    return Promise.reject('タグ名が大文字の BR タグが含まれています。<br /> を使いましょう。')
   }
   if (br_goods) {
     return Promise.resolve('素晴らしいです。これからも <br /> を使いましょう！')
